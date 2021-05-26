@@ -1,0 +1,1407 @@
+{
+  "title": "SK's Wholesale",
+  "navLinks": [{
+    "navTitle": "Home"
+  },{
+    "navTitle": "Product"
+  },{
+    "navTitle": "Item Classification"
+  },{
+    "navTitle": "Brand"
+  }],
+  "banner": {
+    "title": "Sunilkumar Kantilal Grain Merchant",
+    "subTitle": "SK's Wholesale",
+    "location": "ICHALKARANJI"
+  },
+  "aboutUs": {
+    "title": "Welcome to SK's Wholesale",
+    "content": [{
+      "msg": "With the dream of providing quality grains supply, the late Mr. Kantilal Bora started his journey in wholesale business 50 years ago."
+    },{
+      "msg": "His guidance & vision helps Mr. Sunilkumar Bora, lead our company to the top of its segment. We are proudly reaching new heights everyday with the trust & support of our beloved clients and well wishers."
+    },{
+      "msg": "We have recently inaugurated our company at Two more locations in last two years."
+    }],
+    "specialContent": [{
+      "title": "Vision",
+      "msg": [
+        {"msg":"We aim to provide the highest quality, adulteration free grains at reasonable prices and to achieve & maintain the top most position in wholesale market."}
+      ]
+    },{
+      "title": "Mission",
+      "msg": [
+        {"msg":"To build the trust & security within our customers & society with supply of quality grains to keep our brand respected in market."}
+      ]
+    },{
+      "title": "Our work culture",
+      "msg": [
+        {"msg":"Isn’t it great to check out the quality of the grain, you are going to buy? That’s why we have a wide range of samples available for our customers. Customers can choose the grains from the samples they require and the same is available in packing starting from 10 KG to 50 KG."},
+        {"msg":"We are concerned with the quality, shipping, processing, and storage of the grains and we store our products in a clean & hygienic places."},
+        {"msg":"We proudly offer direct sales of packaged and bulk grains. With decades of experience in sourcing only the finest grains, you can be assured that every ingredient is having the highest quality."},
+        {"msg":"Customer satisfaction is our motto & we keep it intact in all circumstances, if the delivered product is damaged then, we make sure to replace it within a certain period of time."}
+      ]
+    }]
+  },
+  "products": [{
+      "title": "rice",
+      "img": "rice",
+      "msgOnThumbnail": "Packing of Rice is availabe in 10KG, 20KG, 25KG and 30KG.",
+      "productDetails": [{
+        "msg": "Packing of Rice is availabe in 10KG, 20KG, 25KG and 30KG."
+      }],
+      "productBrands": [{
+          "brandName":"Basmati",
+          "brandtypes": [{
+            "brandtype": "Steam",
+            "details": [{
+                "msg": "We have Silver type in Basmati Steam brand. We have different variations in it like Silver Pearl, Silver Star, Silver Gold, Silver Regular, Silver Platinum with 10 KG packing variety."
+              },{
+                "msg": "We have Rizwan type in Basmati Steam brand. We have different variations in it like Rizwan Delight, Rizwan Everyday, Rizwan Mini Mogra, Rizwan Regular with 10 KG packing variety."
+              },{
+                "msg": "We have Ruchi Bhog type in Basmati Steam brand. We have different variations in it like Ruchi Bhog Best, Ruchi Bhog Dubar, Ruchi Bhog Gold Biryani, Ruchi Bhog Hyderabadi, Ruchi Bhog Mughlai, Ruchi Bhog Super Mogra, Ruchi Bhog Tini with 10 KG packing variety."
+              },{
+                "msg": "We have Shahabzada type in Basmati Steam brand. We have different variations in it like Shahabzada Super Mogra, Shahabzada Mini Dubar, Shahabzada Premium, Shahabzada Dubar, Shahabzada Special with 10 KG packing variety."
+              },{
+                "msg": "We have Al Abrar type in Basmati Steam brand. We have Al Abrar Tini variations in itin 10 KG packing"
+              },{
+                "msg": "Likewise we have different types in Basmati Steam brand as Grand India in 20 KG Packing, Khushiyon Ke Pal in 20 KG Packing, Swagat Super in 20 KG Packing,00aarif 40 KG Packing, Badhai Basmati in 25 KG Packing"
+            }]
+          },{
+            "brandtype": "Non Steam",
+            "details": [{
+                "msg": "We have Silver type in Basmati Steam brand. We have different variations in it like Silver Pearl, Silver Star, Silver Gold, Silver Regular, Silver Platinum with 10 KG packing variety."
+              },{
+                "msg": "We have Rizwan type in Basmati Steam brand. We have different variations in it like Rizwan Delight, Rizwan Everyday, Rizwan Mini Mogra, Rizwan Regular with 10 KG packing variety."
+              },{
+                "msg": "We have Ruchi Bhog type in Basmati Steam brand. We have different variations in it like Ruchi Bhog Best, Ruchi Bhog Dubar, Ruchi Bhog Gold Biryani, Ruchi Bhog Hyderabadi, Ruchi Bhog Mughlai, Ruchi Bhog Super Mogra, Ruchi Bhog Tini with 10 KG packing variety."
+              },{
+                "msg": "We have Shahabzada type in Basmati Steam brand. We have different variations in it like Shahabzada Super Mogra, Shahabzada Mini Dubar, Shahabzada Premium, Shahabzada Dubar, Shahabzada Special with 10 KG packing variety."
+              },{
+                "msg": "We have Al Abrar type in Basmati Steam brand. We have Al Abrar Tini variations in itin 10 KG packing"
+              },{
+                "msg": "Likewise we have different types in Basmati Steam brand as Grand India in 20 KG Packing, Khushiyon Ke Pal in 20 KG Packing, Swagat Super in 20 KG Packing,00aarif 40 KG Packing, Badhai Basmati in 25 KG Packing"
+            }]
+          }]
+        }]
+    },{
+      "title": "Jwari",
+      "img": "jwari",
+      "msgOnThumbnail": "Packing of Jwari is availabe in 30KG and 50KG.",
+      "productDetails": [{
+        "msg": "Packing of Jwari is availabe in 30KG and 50KG."
+      }]
+    },{
+      "title": "wheat",
+      "img": "wheat",
+      "msgOnThumbnail": "Packing of Wheat is available in 30KG.",
+      "productDetails": [{
+        "msg": "Packing of Wheat is available in 30KG."
+      }]
+    },{
+      "title": "chana dal",
+      "img": "chana-dal",
+      "msgOnThumbnail": "Packing of Chana Dal is availabe in 25KG, 30KG and 50KG.",
+      "productDetails": [{
+        "msg": "Packing of Chana Dal is availabe in 25KG, 30KG and 50KG."
+      }]
+    },{
+      "title": "masoor dal",
+      "img": "masoor-dal",
+      "msgOnThumbnail": "Packing of Masur Daal is availabe in 30KG",
+      "productDetails": [{
+        "msg": "Packing of Masur Daal is availabe in 30KG"
+      }]
+    },{
+      "title": "moong dal",
+      "img": "moog-dal",
+      "msgOnThumbnail": "Packing of Moong Dal is availabe in 30KG",
+      "productDetails": [{
+        "msg": "Packing of Moong Dal is availabe in 30KG"
+      }]
+    },{
+      "title": "poha",
+      "img": "poha",
+      "msgOnThumbnail": "Packing of Poha is available in 25KG and 30KG",
+      "productDetails": [{
+        "msg": "Packing of Poha is available in 25KG and 30KG"
+      }]
+    },{
+      "title": "toor dal",
+      "img": "toor-dal",
+      "msgOnThumbnail": "Packing of Toor Dal is availabe in 30KG",
+      "productDetails": [{
+        "msg": "Packing of Toor Dal is availabe in 30KG"
+      }]
+    },{
+      "title": "Wheat Atta",
+      "img": "wheat-atta",
+      "msgOnThumbnail": "Packing of Wheat Atta is availabe in 30KG  ( 5KG * 6 & 10KG * 3 )",
+      "productDetails": [{
+        "msg": "Packing of Wheat Atta is availabe in 30KG  ( 5KG * 6 & 10KG * 3 )"
+      }]
+    },{
+      "title": "bajari",
+      "img": "bajri",
+      "msgOnThumbnail": "Packing of Bajari is availabe in 50KG and 30KG.",
+      "productDetails": [{
+        "msg": "Packing of Bajari is availabe in 50KG and 30KG."
+      }]
+    }
+  ],
+  "team": [{
+    "imgPath": "",
+    "title": "Mr. Sunilkumar Bora",
+    "details": "With 30 years of work experience he is continuously working towards the innovation & quality improvement of our products"
+  },{
+    "imgPath": "",
+    "title": "Mr. Yash Bora",
+    "details": "Graduated from MIT, Pune, with Masters degree of Business Administration. He is working hard towards the business expansion of SK's Wholesale."
+  }],
+  "contactUs": {
+    "officeAddres": "5/237, Dhanya Lane, Near Federal Bank, Opp PNG Jewellers, Ichalkaranji – 416115",
+    "telephoneNumber": "0230 – 2423381",
+    "phoneNumber": "9823014200 / 9823159900",
+    "emailAddress": "skswholesale1@gmail.com",
+    "map": "contactMap.jpg",
+    "mapPath": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.8701552570574!2d74.46418651486665!3d16.68337978850412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd451ff7da1aa0dd8!2sSUNILKUMAR%20KANTILAL%20(%20SK&#39;s%20WHOLESALE%20)!5e0!3m2!1sen!2sin!4v1579942397501!5m2!1sen!2sin"
+  },
+  "branding": [{
+    "title": "Bajari",
+    "toggleClass": false,
+    "haveSubSubCategory": true,
+    "subItem": [{
+      "title": "Gujarat ( Packing: 30KG )",
+      "haveSubSubCategory": false,
+      "toggleClass": false,
+      "subItem": [{
+        "title": "High Choice"
+      }]
+    },{
+      "title": "Karnataka ( Packing: 50KG )",
+      "haveSubSubCategory": false,
+      "toggleClass": false,
+      "subItem": [{
+        "title": "Annapurna"
+      },{
+        "title": "Non Brand"
+      }]
+    }]
+  },{
+    "title": "Chanadal",
+    "packing": "30 Kg",
+    "haveSubSubCategory": false,
+    "toggleClass": false,
+    "subItem": [{
+      "title": "Apple"
+    },{
+      "title": "Angel ( Packing : 25KG )"
+    },{
+      "title": "Badshah"
+    },{
+      "title": "Bhushan Gold"
+    },{
+      "title": "Classic"
+    },{
+      "title": "Dal Parivar"
+    },{
+      "title": "ETC"
+    },{
+      "title": "H 2 O"
+    },{
+      "title": "JM ( Packing : 50KG )"
+    },{
+      "title": "Kalash"
+    },{
+      "title": "Kitchen Partner"
+    },{
+      "title": "Om Kalash"
+    },{
+      "title": "Pistol"
+    },{
+      "title": "Saylee "
+    },{
+      "title": "Swad"
+    },{
+      "title": "White Lotus"
+    },{
+      "title": "3 Star"
+    }]
+  },{
+    "title": "Jwari",
+    "note": "Packing 25Kg, 30Kg & 50Kg",
+    "haveSubSubCategory": true,
+    "toggleClass": false,
+    "subItem": [{
+      "title": "Shalu",
+      "toggleClass": false,
+      "haveSubSubCategory": false,
+      "subItem": [{
+        "title": "A One"
+      },{
+        "title": "Blue Bird"
+      },{
+        "title": "Champion"
+      },{
+        "title": "Chavi"
+      },{
+        "title": "Dhanlaxmi"
+      },{
+        "title": "Five Star"
+      },{
+        "title": "Gulab"
+      },{
+        "title": "Green Ganesh"
+      },{
+        "title": "Gruhlaxmi"
+      },{
+        "title": "Kesar Pista"
+      },{
+        "title": "Mahalaxmi"
+      },{
+        "title": "Manikmoti"
+      },{
+        "title": "Moti Gold"
+      },{
+        "title": "RT"
+      },{
+        "title": "Siddhi Ganesh"
+      },{
+        "title": "Tulsi"
+      }]
+    },{
+      "title": "Hybrid / Vasant / Nandyal",
+      "note": "Packing 25Kg, 30Kg & 50Kg",
+      "haveSubSubCategory": true,
+      "toggleClass": false,
+      "subItem": [{
+        "title": "Packing 25 KG",
+        "toggleClass": false,
+        "haveSubSubCategory": false,
+        "subItem": [{
+          "title": "Dairy Milk"
+        },{
+          "title": "Maharaja"
+        },{
+          "title": "333"
+        },{
+          "title": "999"
+        }]
+      },{
+        "title": "Packing 30 KG",
+        "toggleClass": false,
+        "haveSubSubCategory": false,
+        "subItem": [{
+          "title": "Deepak"
+        },{
+          "title": "Green Apple"
+        },{
+          "title": "Heeramoti"
+        },{
+          "title": "Kamal"
+        },{
+          "title": "Kohinoor"
+        },{
+          "title": "Mayuri"
+        },{
+          "title": "Rajmoti"
+        },{
+          "title": "Rose"
+        },{
+          "title": "Shree"
+        },{
+          "title": "Swastik"
+        },{
+          "title": "Three Rose"
+        },{
+          "title": "Tiger"
+        }]
+      },{
+        "title": "Packing 50 KG",
+        "toggleClass": false,
+        "haveSubSubCategory": false,
+        "subItem": [{
+          "title": "Annapurna"
+        },{
+          "title": "Appu"
+        },{
+          "title": "Bullet"
+        },{
+          "title": "Badshah"
+        },{
+          "title": "Diamond"
+        },{
+          "title": "Dilkhush"
+        },{
+          "title": "Deer"
+        },{
+          "title": "Double Horse"
+        },{
+          "title": "Kalash"
+        },{
+          "title": "Kisan"
+        },{
+          "title": "Mango"
+        },{
+          "title": "Nandi"
+        },{
+          "title": "Om Nandyal"
+        },{
+          "title": "Pavan"
+        },{
+          "title": "Three Mango"
+        },{
+          "title": "999"
+        }]
+      }]
+    }]
+  },{
+    "title": "Masoor Dal",
+    "packing": "30 Kg",
+    "haveSubSubCategory": false,
+    "toggleClass": false,
+    "subItem": [{
+      "title": "Dal Parivar"
+    },{
+      "title": "Deluxe"
+    },{
+      "title": "Double Hatti"
+    },{
+      "title": "ETC"
+    },{
+      "title": "KK"
+    },{
+      "title": "Mastani"
+    },{
+      "title": "Premium"
+    },{
+      "title": "Ship"
+    },{
+      "title": "Single Dollar"
+    },{
+      "title": "3 Badshah"
+    }]
+  },{
+    "title": "Moong Dal",
+    "packing": "30 Kg",
+    "haveSubSubCategory": false,
+    "toggleClass": false,
+    "subItem": [{
+      "title": "5 Star"
+    },{
+      "title": "Almond"
+    },{
+      "title": "Arawali"
+    },{
+      "title": "Bullet"
+    },{
+      "title": "Chandan"
+    },{
+      "title": "Gold Crown"
+    },{
+      "title": "Lemon"
+    },{
+      "title": "Mayara"
+    },{
+      "title": "Natural Green"
+    },{
+      "title": "Rajasthan No.1"
+    },{
+      "title": "Rajasthan Royal"
+    },{
+      "title": "RC"
+    },{
+      "title": "Sarvottam"
+    },{
+      "title": "Shubh Labh"
+    },{
+      "title": "Suryanagari"
+    },{
+      "title": "Swadishta"
+    },{
+      "title": "Zenda"
+    },{
+      "title": "711"
+    }]
+  },{
+    "title": "Poha",
+    "packing": "30 Kg",
+    "haveSubSubCategory": false,
+    "toggleClass": false,
+    "subItem": [{
+      "title": "Bindass"
+    },{
+      "title": "BMW"
+    },{
+      "title": "Crown"
+    },{
+      "title": "DI"
+    },{
+      "title": "Gitanjali"
+    },{
+      "title": "Kaju Katli"
+    },{
+      "title": "Kakaji"
+    },{
+      "title": "Kalash"
+    },{
+      "title": "Krishna Gold"
+    },{
+      "title": "Nargis"
+    },{
+      "title": "RT"
+    },{
+      "title": "Ship"
+    },{
+      "title": "Shaktimahaan"
+    },{
+      "title": "Safed Gulab"
+    },{
+      "title": "Super Sixer"
+    },{
+      "title": "Surya"
+    },{
+      "title": "Tajmahal"
+    }]
+  },{
+    "title": "Rice",
+    "toggleClass": false,
+    "haveSubSubCategory": true,
+    "subItem": [{
+      "title": "Ambemore Rice",
+      "toggleClass": false,
+      "haveSubSubzCategory": true,
+      "subItem": [{
+        "title": "Akhand( Packing : 25KG & 10KG )",
+        "toggleClass": false,
+        "noSubCategory": true,
+        "haveSubSubCategory": false,
+        "subItem": [{
+          "title": "Bal Gopal Ambemore"
+        },{
+          "title": "Gopal Ambemore"
+        },{
+          "title": "Mast Mogra Ambemore"
+        },{
+          "title": "Triveni Ambemore( Packing : 25KG )"
+        }]
+      },{
+        "title": "Tukda",
+        "toggleClass": false,
+        "noSubCategory": true,
+        "haveSubSubCategory": false,
+        "subItem": [{
+          "title": "Ambemore Kani"
+        }]
+      }]
+    },{
+      "title": "Basmati",
+      "toggleClass": false,
+      "haveSubSubCategory": true,
+      "subItem": [{
+        "title": "Non Steam",
+        "toggleClass": false,
+        "haveSubSubCategory": true,
+        "subItem": [{
+          "title": "Boat ( Packing : 10KG )",
+          "toggleClass": false,
+          "haveSubSubCategory": false,
+          "subItem": [{
+            "title": "Boat Daily"
+          },{
+            "title": "Boat Economy"
+          },{
+            "title": "Boat Everyday"
+          },{
+            "title": "Boat lite"
+          },{
+            "title": "Boat Supreme"
+          }]
+        },{
+          "title": "Chamak ( Packing : 10KG )",
+          "toggleClass": false,
+          "haveSubSubCategory": false,
+          "subItem": [{
+            "title": "Chamak 25 Carat"
+          },{
+            "title": "Chamak 40 Carat"
+          },{
+            "title": "Chamak 50 Carat"
+          },{
+            "title": "Chamak 75 Carat"
+          }]
+        },{
+          "title": "Daawat ( Packing : 10KG )",
+          "toggleClass": false,
+          "haveSubSubCategory": false,
+          "note1": "Note - Old Rice: Plastic Bag, New Rice: Cloth Bag",
+          "subItem": [{
+            "title": "Daawat 40 Carat ( NIKI )"
+          },{
+            "title": "Daawat 50 Carat ( TINI )"
+          },{
+            "title": "Daawat 60 Carat ( MINI )"
+          },{
+            "title": "Daawat 70 Carat ( GINI )"
+          },{
+            "title": "Daawat 90 Carat ( Daawat Super )"
+          },{
+            "title": "Daawat Super Box"
+          }]
+        },{
+          "title": "Hatti ( Packing : 10KG )",
+          "toggleClass": false,
+          "haveSubSubCategory": false,
+          "subItem": [{
+            "title": "Hatti Broken"
+          },{
+            "title": "Hatti Mini Dubar"
+          },{
+            "title": "Hatti Mogra"
+          }]
+        },{
+          "title": "Keshav ( Packing : 10KG )",
+          "haveSubSubCategory": false,
+          "toggleClass": false,
+          "subItem": [{
+            "title": "Keshav 30 Carat"
+          },{
+            "title": "Keshav 40 Carat"
+          },{
+            "title": "Keshav 60 Carat"
+          },{
+            "title": "Keshav 70 Carat"
+          },{
+            "title": "Keshav 80 Carat"
+          },{
+            "title": "Keshav 90 Carat"
+          }]
+        },{
+          "title": "Masala Bhat( Mini Mogra )( Packing: 10KG )"
+        },{
+          "title": "Red Rose ( Packing : 10KG )",
+          "toggleClass": false,
+          "haveSubSubCategory": false,
+          "subItem": [{
+            "title": "Red Rose Delight"
+          },{
+            "title": "Red Rose Dubar"
+          },{
+            "title": "Red Rose Grade No.3"
+          },{
+            "title": "Red Rose Mogra"
+          },{
+            "title": "Red Rose Royal"
+          },{
+            "title": "Red Rose Rozana"
+          }]
+        }]
+      },{
+        "title": "Steam",
+        "haveSubSubCategory": true,
+        "toggleClass": false,
+        "subItem": [{
+          "title": "Al Abrar ( Packing : 10KG )",
+          "toggleClass": false,
+          "haveSubSubCategory": false,
+          "subItem": [{
+            "title": "Al Abrar Mini Mogra"
+          },{
+            "title": "Al Abrar Tini"
+          }]
+        },{
+          "title": "Badhai Basmati ( Packing : 25KG )"
+        },{
+          "title": "Dilshaan ( Packing : 25 KG )"
+        },{
+          "title": "Grand India ( Packing : 20KG )"
+        },{
+          "title": "Grain ( Packing : 10KG )",
+          "haveSubSubCategory": true,
+          "toggleClass": false,
+          "subItem": [{
+            "title": "Grain Dubar"
+          },{
+            "title": "Grain Mongra"
+          },{
+            "title": "Grain Super Dubar"
+          },{
+            "title": "Grain Tibar"
+          }]
+        },{
+          "title": "Khushiyon Ke Pal ( Packing : 20KG )"
+        },{
+          "title": "Rizwan ( Packing : 10KG )",
+          "toggleClass": false,
+          "haveSubSubCategory": false,
+          "subItem": [{
+            "title": "Rizwan Delight"
+          },{
+            "title": "Rizwan Everyday"
+          },{
+            "title": "Rizwan Mini Mogra"
+          },{
+            "title": "Rizwan Regular"
+          }]
+        },{
+          "title": "Ruchi Bhog ( Packing : 10KG )",
+          "toggleClass": false,
+          "haveSubSubCategory": false,
+          "subItem": [{
+            "title": "Ruchi Bhog Best"
+          },{
+            "title": "Ruchi Bhog Dubar"
+          },{
+            "title": "Ruchi Bhog Gold Biryani"
+          },{
+            "title": "Ruchi Bhog Hyderabadi"
+          },{
+            "title": "Ruchi Bhog Mughlai"
+          },{
+            "title": "Ruchi Bhog Super Mogra"
+          },{
+            "title": "Ruchi Bhog Tini"
+          }]
+        },{
+          "title": "Shahabzada ( Packing : 10KG )",
+          "toggleClass": false,
+          "haveSubSubCategory": false,
+          "subItem": [{
+            "title": "Shahabzada Dubar"
+          },{
+            "title": "Shahabzada Mini Dubar"
+          },{
+            "title": "Shahabzada Premium"
+          },{
+            "title": "Shahabzada Special"
+          },{
+            "title": "Shahabzada Super Mogra"
+          }]
+        },{
+          "title": "Shahijad ( Packing : 20KG )"
+        },{
+          "title": "Silver ( Packing : 10KG )",
+          "haveSubSubCategory": false,
+          "toggleClass": false,
+          "subItem": [{
+            "title": "Silver Diamond"
+          },{
+            "title": "Silver Gold"
+          },{
+            "title": "Silver Pearl"
+          },{
+            "title": "Silver Platinum"
+          },{
+            "title": "Silver Regular"
+          },{
+            "title": "Silver Star"
+          }]
+        },{
+          "title": "Swach Bharat ( Packing : 20KG )"
+        },{
+          "title": "Swagat Super ( Packing : 20KG )"
+        },{
+          "title": "Taarif ( Packing : 40KG )"
+        }]
+      }]
+    },{
+      "title": "Ghansal ( Packing : 25KG )"
+    },{
+      "title": "Indrayani Rice",
+      "toggleClass": false,
+      "haveSubSubCategory": true,
+      "noSubCategory": true,
+      "subItem": [{
+        "title": "Akkha ( Packing : 25KG )",
+        "toggleClass": false,
+        "haveSubSubCategory": false,
+        "noSubCategory": true,
+        "subItem": [{
+          "title": "999 Gold Indrayani"
+        },{
+          "title": "Ajara Indrayani"
+        },{
+          "title": "Ashirwad Indrayani"
+        },{
+          "title": "Bhivate Indrayani"
+        },{
+          "title": "Hero Indrayani"
+        },{
+          "title": "Jay Malhar Indrayani"
+        },{
+          "title": "Om Indrayani ( Packing : 30KG )"
+        },{
+          "title": "RC Indrayani ( Packing : 30KG )"
+        },{
+          "title": "Sarvoday Indrayani"
+        },{
+          "title": "Shetkari Indrayani"
+        },{
+          "title": "Shriram Indrayani"
+        }]
+      },{
+        "title": "Tukda ( Kani ) ( Packing: 25KG )",
+        "toggleClass": false,
+        "haveSubSubCategory": false,
+        "noSubCategory": true,
+        "subItem": [{
+          "title": "Ajara Indrayani Dubar"
+        },{
+          "title": "Ajara Indrayani Kani"
+        },{
+          "title": "Bhivate Indrayani Kani"
+        },{
+          "title": "Durva Indrayani Kani"
+        },{
+          "title": "Lotus Indrayani Kani ( Packing : 30KG )"
+        },{
+          "title": "Jay Malhar Indrayani Dubar"
+        },{
+          "title": "Rajhans Indrayani Kani"
+        },{
+          "title": "16 Number Indrayani Kani"
+        },{
+          "title": "999 Gold Indrayani Kani"
+        }]
+      }]
+    },{
+      "title": "Karjat ( Packing : 25KG )",
+      "toggleClass": false,
+      "haveSubSubCategory": false,
+      "subItem": [{
+        "title": "Dolphin Karjat"
+      },{
+        "title": "Haran Karjat"
+      },{
+        "title": "Kissan Karjat"
+      },{
+        "title": "Swastik Karjat"
+      }]
+    },{
+      "title": "Kolam Rice",
+      "toggleClass": false,
+      "haveSubSubCategory": true,
+      "subItem": [{
+        "title": "Non Steam Kolam",
+        "toggleClass": false,
+        "haveSubSubCategory": true,
+        "subItem": [{
+          "title": "Akkha ( Packing : 25KG )",
+          "toggleClass": false,
+          "haveSubSubCategory": false,
+          "subItem": [{
+            "title": "Aishwarya Kolam"
+          },{
+            "title": "Chetak Kolam"
+          },{
+            "title": "Royal Chetak Kolam ( Packing : 10KG )"
+          },{
+            "title": "Shahi Chetak Kolam"
+          },{
+            "title": "Shreeram Kolam ( Packing : 30KG )"
+          },{
+            "title": "Tulsi Gold Kolam"
+          }]
+        },{
+          "title": "Tukda ( Packing : 25KG )",
+          "toggleClass": false,
+          "haveSubSubCategory": false,
+          "subItem": [{
+            "title": "Barkath"
+          },{
+            "title": "Bullet"
+          },{
+            "title": "Chetak Kolam Tukda"
+          },{
+            "title": "Cherry Tukda ( Packing : 30KG )"
+          }]
+        }]
+      }, {
+        "title": "Steam Kolam ( Packing : 25KG )",
+        "toggleClass": false,
+        "haveSubSubCategory": false,
+        "noSubCategory": true,
+        "subItem": [{
+          "title": "Audi Steam"
+        },{
+          "title": "Bhivate"
+        },{
+          "title": "Bullet"
+        },{
+          "title": "Chand Tara"
+        },{
+          "title": "Jaguar Steam"
+        },{
+          "title": "Joker"
+        },{
+          "title": "JSR ( Jai Shree Ram )"
+        },{
+          "title": "KB"
+        },{
+          "title": "Kubera"
+        },{
+          "title": "Lucky Gold Steam"
+        },{
+          "title": "Maalik"
+        },{
+          "title": "Magic Steam"
+        },{
+          "title": "Mother"
+        },{
+          "title": "Mother Gold Steam"
+        },{
+          "title": "One Plus Steam"
+        },{
+          "title": "Qurbani"
+        },{
+          "title": "Sanjeevani"
+        },{
+          "title": "Shubham India Steam"
+        },{
+          "title": "Singham"
+        },{
+          "title": "Siddhi Steam"
+        },{
+          "title": "Sultan"
+        },{
+          "title": "Supreme"
+        },{
+          "title": "Srimathi Steam"
+        },{
+          "title": "Ulta Chashma"
+        },{
+          "title": "Zara Steam"
+        },{
+          "title": "555"
+        }]
+      }]
+    },{
+      "title": "Masoori ( Packing : 25KG )",
+      "toggleClass": false,
+      "haveSubSubCategory": false,
+      "subItem": [{
+        "title": "Bawarchi Masoori"
+      },{
+        "title": "Hatti Masoori"
+      },{
+        "title": "Kalash Masoori"
+      },{
+        "title": "Mango Masoori"
+      },{
+        "title": "Red Chilly Masoori"
+      },{
+        "title": "Swastik Masoori"
+      }]
+    },{
+      "title": "Non Steam ( Raw Rice )( Packing : 25KG )",
+      "toggleClass": false,
+      "haveSubSubCategory": false,
+      "subItem": [{
+        "title": "Aishwarya Tibar"
+      },{
+        "title": "Bajaj Silver"
+      },{
+        "title": "Bajaj Sona"
+      },{
+        "title": "Bhagwa Kamal"
+      },{
+        "title": "Blackberry"
+      },{
+        "title": "Cherry (30KG )"
+      },{
+        "title": "Kalbhairav HTML"
+      },{
+        "title": "Kali Mooch ( 30KG )"
+      },{
+        "title": "Neela Kamal"
+      },{
+        "title": "Saarthi"
+      },{
+        "title": "Yashraj"
+      },{
+        "title": "7 Star ( 30KG )"
+      }]
+    },{
+      "title": "Pana Rice ( Packing : 25KG )",
+      "haveSubSubCategory": false,
+      "toggleClass": false,
+      "subItem": [{
+        "title": "Apple Pana"
+      },{
+        "title": "Bawarchi Indrayani Pana"
+      },{
+        "title": "Bawarchi Pana"
+      },{
+        "title": "Chand Tara Pana"
+      },{
+        "title": "Cycle Pana"
+      },{
+        "title": "Deepam Pana"
+      },{
+        "title": "Diamond Pana"
+      },{
+        "title": "Maharaja Pana"
+      },{
+        "title": "Gajraj Pana"
+      },{
+        "title": "Mayur Pana"
+      },{
+        "title": "Nawab Pana"
+      },{
+        "title": "Om Pana"
+      },{
+        "title": "Om Indrayani Pana"
+      },{
+        "title": "Ooty Pana"
+      },{
+        "title": "Star Pana"
+      },{
+        "title": "Tajmahal Pana"
+      },{
+        "title": "555 Pana"
+      }]
+    },{
+      "title": "Parboiled Rice ( Ukda )( Packing : 25KG )",
+      "toggleClass": false,
+      "haveSubSubCategory": false,
+      "subItem": [{
+        "title": "Deepam"
+      }]
+    },{
+      "title": "Ratnagiri ( Packing : 30KG )",
+      "toggleClass": false,
+      "haveSubSubCategory": false,
+      "subItem": [{
+        "title": "Kalash Ratnagiri"
+      }]
+    },{
+      "title": "Sela Rice ( Packing : 25KG )",
+      "toggleClass": false,
+      "haveSubSubCategory": false,
+      "subItem": [{
+        "title": "Biryani King Sela"
+      },{
+        "title": "Hatti Sela"
+      },{
+        "title": "Signature"
+      }]
+    },{
+      "title": "Steam",
+      "toggleClass": false,
+      "haveSubSubCategory": true,
+      "subItem": [{
+        "title": "Akkha ( Packing : 25KG )",
+        "toggleClass": false,
+        "noSubCategory": true,
+        "haveSubSubCategory": false,
+        "subItem": [{
+          "title": "Bawarchi Steam"
+        },{
+          "title": "Gajraj Steam HMT"
+        },{
+          "title": "Gemine Lamination"
+        },{
+          "title": "Gemine Steam(White Bag)"
+        },{
+          "title": "Gemine Steam(Yellow Bag)"
+        },{
+          "title": "Maharaja Steam"
+        },{
+          "title": "Manpasand Steam"
+        },{
+          "title": "Mubarak Steam"
+        },{
+          "title": "Namokar Steam"
+        },{
+          "title": "Orange Steam"
+        },{
+          "title": "Pruthviraj Steam"
+        },{
+          "title": "Rajmoti Steam"
+        },{
+          "title": "Star Hirva(Sona Masoori)"
+        },{
+          "title": "Star Neela(Sona Masoori)"
+        },{
+          "title": "Star Jeera"
+        },{
+          "title": "5 Steam"
+        },{
+          "title": "5 Star Steam"
+        },{
+          "title": "7 Star"
+        }]
+      },{
+        "title": "Tukda ( Kani ) ( Packing : 25KG )",
+        "toggleClass": false,
+        "noSubCategory": true,
+        "haveSubSubCategory": false,
+        "subItem": [{
+          "title": "Half Steam Kani"
+        },{
+          "title": "Joker Kani"
+        },{
+          "title": "Kalash Steam"
+        },{
+          "title": "Kalbhairav Steam Kani"
+        },{
+          "title": "Kitty Bites"
+        },{
+          "title": "Meghmala Kani"
+        },{
+          "title": "Murlidhar Kani"
+        },{
+          "title": "Pari Kani"
+        },{
+          "title": "Rani Kani"
+        },{
+          "title": "SS Gold Kani"
+        },{
+          "title": "Tajmahal Kani"
+        },{
+          "title": "Trupti Steam Kani"
+        },{
+          "title": "5 Brand Kani"
+        }]
+      },{
+        "title": "3/4th Steam ( Packing : 25KG )",
+        "toggleClass": false,
+        "noSubCategory": true,
+        "haveSubSubCategory": false,
+        "subItem": [{
+          "title": "Jyoti ¾"
+        },{
+          "title": "Star ¾"
+        }]
+      }]
+    }]
+  },{
+    "title": "Toor dal",
+    "packing": "30 Kg",
+    "haveSubSubCategory": false,
+    "toggleClass": false,
+    "subItem": [{
+      "title": "5G"
+    },{
+      "title": "Baba Foods"
+    },{
+      "title": "Dolphin"
+    },{
+      "title": "Everyday"
+    },{
+      "title": "Good Morning"
+    },{
+      "title": "Moti Gold"
+    },{
+      "title": "Orange"
+    },{
+      "title": "Pistol"
+    },{
+      "title": "Pai Star"
+    },{
+      "title": "Star Gold"
+    },{
+      "title": "Surabhi"
+    },{
+      "title": "Tractor"
+    }]
+  },{
+    "title": "Wheat",
+    "packing": "30 Kg",
+    "toggleClass": false,
+    "haveSubSubCategory": true,
+    "subItem": [{
+      "title": "Bansi",
+      "toggleClass": false,
+      "haveSubSubCategory": false,
+      "subItem": [{
+        "title": "Arjun"
+      },{
+        "title": "Alishan"
+      },{
+        "title": "Amul"
+      },{
+        "title": "Bahubali"
+      },{
+        "title": "Blackberry"
+      },{
+        "title": "Blue Star"
+      },{
+        "title": "Bullet"
+      },{
+        "title": "Chakra"
+      },{
+        "title": "Charlie"
+      },{
+        "title": "Charlie Champion"
+      },{
+        "title": "Cooking Delight"
+      },{
+        "title": "Desi Pakwan"
+      },{
+        "title": "DilKaRishta"
+      },{
+        "title": "Fruti"
+      },{
+        "title": "Ganesh"
+      },{
+        "title": "Green Apple"
+      },{
+        "title": "Gulal"
+      },{
+        "title": "Gulmohar"
+      },{
+        "title": "IPL"
+      },{
+        "title": "Kesar"
+      },{
+        "title": "Khushi"
+      },{
+        "title": "Khushbu Khajana"
+      },{
+        "title": "Kitchen Delight"
+      },{
+        "title": "King"
+      },{
+        "title": "Kohinoor"
+      },{
+        "title": "Krishna"
+      },{
+        "title": "Lotus"
+      },{
+        "title": "Mast Mast"
+      },{
+        "title": "Makhan Malai"
+      },{
+        "title": "Mahalaxmi"
+      },{
+        "title": "Malwa’s Magic"
+      },{
+        "title": "Mangalmurti"
+      },{
+        "title": "Moraya"
+      },{
+        "title": "Nakshtra"
+      },{
+        "title": "NamoNamo"
+      },{
+        "title": "Nice"
+      },{
+        "title": "No.1"
+      },{
+        "title": "Olympic"
+      },{
+        "title": "Olympic Bhari"
+      },{
+        "title": "Oxygen"
+      },{
+        "title": "Rajbhog"
+      },{
+        "title": "Radhika"
+      },{
+        "title": "Rajat Gold"
+      },{
+        "title": "Ratnadeep"
+      },{
+        "title": "Ratlami Gold"
+      },{
+        "title": "Riddhi Siddhi"
+      },{
+        "title": "Shahi Dawat"
+      },{
+        "title": "Signature"
+      },{
+        "title": "Sixer"
+      },{
+        "title": "Sun"
+      },{
+        "title": "Smart Choice"
+      },{
+        "title": "Swarna Mayur"
+      },{
+        "title": "Siya Gold"
+      },{
+        "title": "Surabhi Gold"
+      },{
+        "title": "SS"
+      },{
+        "title": "Twitter"
+      },{
+        "title": "Virat"
+      },{
+        "title": "Vitamin"
+      },{
+        "title": "Yes"
+      },{
+        "title": "Yoga"
+      },{
+        "title": "Yuvraj"
+      },{
+        "title": "Ziya"
+      },{
+        "title": "24 Carat"
+      }]
+    },{
+      "title": "Sihori",
+      "toggleClass": false,
+      "haveSubSubCategory": false,
+      "subItem": [{
+        "title": "Akhand Diya"
+      },{
+        "title": "Dhan Samrat"
+      },{
+        "title": "Golden Grain"
+      },{
+        "title": "Hira"
+      },{
+        "title": "Jaora Champion"
+      },{
+        "title": "Jaora Special"
+      },{
+        "title": "Khushbu Gold"
+      },{
+        "title": "Marwadi Sihore"
+      },{
+        "title": "Patrani"
+      },{
+        "title": "Rajat Diamond"
+      },{
+        "title": "Ratlam  King ( Packing : 25KG )"
+      },{
+        "title": "Titan"
+      }]
+    }]
+  },{
+    "title": "Wheat Atta",
+    "packing": "30 Kg ( Packing : 10Kg * 3 & 5Kg * 6)",
+    "haveSubSubCategory": false,
+    "toggleClass": false,
+    "subItem": [{
+      "title": "Bigul"
+    },{
+      "title": "Indore Gold"
+    },{
+      "title": "Jagruti"
+    },{
+      "title": "Jaora Premium"
+    },{
+      "title": "Maharaja"
+    },{
+      "title": "Manas"
+    },{
+      "title": "MP Gold"
+    },{
+      "title": "MP No.1 ( 5Kg * 6 )"
+    },{
+      "title": "Ruchi"
+    },{
+      "title": "Super Sixer ( 5kg * 6 )"
+    },{
+      "title": "SS"
+    },{
+      "title": "Swastik"
+    }]
+  }],
+  "itemClassification": [{
+    "title": "Bajari",
+    "toggleClass": false,
+    "subItem": [{
+      "title": "Gujarat"
+    },{
+      "title": "Karnataka"
+    }]
+  },{
+    "title": "Chanadal",
+    "toggleClass": false,
+    "subItem": [{
+      "title": "Rajwadi"
+    }]
+  },{
+    "title": "Jwari",
+    "toggleClass": false,
+    "subItem": [{
+      "title": "Shalu",
+      "toggleClass": false
+    },{
+      "title": "Hybrid / Vasant / Nandyal",
+      "toggleClass": false
+    }]
+  },{
+    "title": "Rice",
+    "toggleClass": false,
+    "subItem": [{
+      "title": "Basmati",
+      "toggleClass": false,
+      "subItem": [{
+        "title": "Steam"
+      },{
+        "title": "Non Steam"
+      }]
+    },{
+      "title": "Steam",
+      "toggleClass": false,
+      "subItem": [{
+        "title": "Akkha"
+      },{
+        "title": "Tukda ( Kani )"
+      }]
+    },{
+      "title": "Kolam Rice",
+      "toggleClass": false,
+      "subItem": [{
+        "title": "Steam Kolam"
+      },{
+        "title": "Non Steam Kolam",
+        "toggleClass": false,
+        "subItem": [{
+          "title": "Akkha"
+        },{
+          "title": "Tukda"
+        }]
+      }]
+    },{
+      "title": "Parboiled Rice ( Ukda )"
+    },{
+      "title": "Pana Rice"
+    },{
+      "title": "Ambemore Rice",
+      "toggleClass": false,
+      "subItem": [{
+        "title": "Akhand"
+      },{
+        "title": "Tukda"
+      }]
+    },{
+      "title": "Ghansal"
+    },{
+      "title": "Sela Rice"
+    },{
+      "title": "Masoorie"
+    },{
+      "title": "Indrayani Rice",
+      "toggleClass": false,
+      "subItem": [{
+        "title": "Akhand"
+      },{
+        "title": "Tukda"
+      }]
+    }]
+  },{
+    "title": "Toor Dal",
+    "toggleClass": false,
+    "subItem": [{
+      "title": "President"
+    }]
+  },{
+    "title": "Wheat",
+    "toggleClass": false,
+    "subItem": [{
+      "title": "Bansi / Lokwan",
+      "toggleClass": false
+    },{
+      "title": "Sihori",
+      "toggleClass": false
+    }]
+  }],
+  "foooter": "myGroup Corporation"
+}
