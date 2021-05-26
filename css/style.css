@@ -959,3 +959,8 @@ footer {
 .flexUnwrap {
   flex-wrap: nowrap !important;
 }
+.brandSubCategoryDesktop1,
+.brandSubCategoryDesktop2,
+.brandSubCategoryDesktop3 {
+  overflow-y: auto;
+}
