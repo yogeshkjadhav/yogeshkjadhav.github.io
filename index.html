@@ -1,13 +1,716 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>DhanAdvertising</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles.3668942c5a7b9b259ebf.css"></head>
-<body>
-  <app-root></app-root>
-<script src="runtime.7b63b9fd40098a2e8207.js" defer></script><script src="polyfills.94daefd414b8355106ab.js" defer></script><script src="main.9148593e85e9de2ce2ee.js" defer></script></body>
+<html ng-app="skWholesale" ng-controller="MainCtrl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="favicon.ico">
+    <title>SK's Wholesale</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div ng-class="activePage === 1 ? 'home' : activePage === 5 ? 'productList branding' : 'productList'">
+      <div ng-class="showPage ? 'slidingShutter open' : 'slidingShutter'">
+        <div class="loading">
+          Welcome...
+        </div>
+      </div>
+      <section ng-class="(activePage === 1 && showPage) ? 'banner activeBanner' : 'banner'">
+        <div class="navbar-wrapper">
+          <div class="container">
+            <div class="navbar navbar-fixed-top" id="id-navigation" role="navigation">
+              <div class="containwrapper"></div>
+              <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" ng-click="handleMobileNav()">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" ng-click="handlePageChange('Home')"><img src="img/SkswholeLogo.png" />{{skDetails.title}}</a>
+                </div>
+                <div ng-class="mobileNavClass ? 'navbar-collapse collapse in' : 'navbar-collapse collapse'">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li ng-repeat="link in skDetails.navLinks">
+                      <a ng-class="((activePage === 1 && link.navTitle === 'Home') || 
+                                    (activePage === 2 && link.navTitle === 'Product') || 
+                                    (activePage === 5 && link.navTitle === 'Brand') || 
+                                    (activePage === 6 && link.navTitle === 'Item Classification')) ? 'active' : ''" 
+                        ng-click="handlePageChange(link.navTitle)">{{link.navTitle}}</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bannerContainer" ng-if="activePage === 1">
+          <h2>{{skDetails.banner.title}}</h2>
+          <h1>{{skDetails.banner.subTitle}}</h1>
+          <h3>{{skDetails.banner.location}}</h3>
+        </div>
+        <div class="bannerContainer" ng-if="activePage !== 1">
+          <div class="container">
+            <h1>{{title | uppercase}}</h1>
+          </div>
+        </div>
+      </section>
+      <div ng-if="activePage === 1">
+        <section>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 aboutUsBanner imageWrapper"></div>
+              <div class="col-md-6">
+                <h2>{{skDetails.aboutUs.title}}</h2>
+                <p ng-repeat="message in skDetails.aboutUs.content">{{message.msg}}</p>
+                <a ng-click="aboutUsPage()">More..</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="products odd">
+          <div class="container">
+            <div class="row text-center titleSection">
+              <h2>Products</h2>
+              <a ng-click="handlePageChange('Product')" class="btn">Read More</a>
+            </div>
+            <ul class="row">
+              <li class="col-sm-4" ng-repeat="product in skDetails.products" ng-if="$index < 3">
+                <div class="productPopupWrapper">
+                  <img ng-src="./img/products/{{product.img}}.jpg"/>
+                  <div class="productPopup">
+                    <h3 class="text-uppercase">{{product.title | uppercase}}</h3>
+                    <p>{{product.msgOnThumbnail}}</p>
+                    <a ng-click="productDetailsPage(product)">Read More</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="team">
+          <div class="container">
+            <div class="row text-center">
+              <h2>Our Team</h2>
+            </div>
+            <ul class="row text-center">
+              <li class="col-sm-6" ng-repeat="teamMate in skDetails.team">
+                <div class="teamMates">
+                  <h2>{{teamMate.title}}</h2>
+                  <p>{{teamMate.details}}</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div ng-if="activePage === 2">
+        <section class="products">
+          <div class="container">
+            <ul class="row">
+              <li class="col-sm-4" ng-repeat="product in skDetails.products">
+                <div class="productPopupWrapper">
+                  <img ng-src="./img/products/{{product.img}}.jpg"/>
+                  <div class="productPopup">
+                    <h3>{{product.title | uppercase}}</h3>
+                    <p>{{product.msgOnThumbnail}}</p>
+                    <a ng-click="productDetailsPage(product)">Read More</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <div ng-if="activePage === 3">
+        <section class="products">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <img class="productDetailsImage" ng-src="./img/products/{{singleProductDetail.img}}.jpg"/>
+                <div class="productDetailsPage">
+                  <h2>{{singleProductDetail.title | uppercase}}</h2>
+                  <p ng-repeat="productDetail in singleProductDetail.productDetails">{{productDetail.msg}}</p>
+                  <div ng-repeat="productBrands in singleProductDetail.productBrands">
+                    <h3>{{productBrands.brandName}}</h3>
+                    <div ng-repeat="brandtype in productBrands.brandtypes">
+                      <h4>{{brandtype.brandtype}}</h4>
+                      <ul>
+                        <li ng-repeat="description in brandtype.details">{{description.msg}}</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div ng-if="activePage === 4">
+        <section class="products">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <img class="productDetailsImage" src="./img/aboutUs.jpg"/>
+                <div class="productDetailsPage">
+                  <h3>SK's Wholesale</h3>
+                  <p ng-repeat="message in skDetails.aboutUs.content">{{message.msg}}</p>
+                  <div ng-repeat="specialContent in skDetails.aboutUs.specialContent">
+                    <h3>{{specialContent.title}}</h3>
+                    <p ng-repeat="message in specialContent.msg">{{message.msg}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div ng-if="activePage === 7">
+        <section class="products classification">
+          <!--div class="container displayNone"-->
+          <div class="container displayNone">
+            <div class="row">
+              <div class="col-sm-4 brandingSideMenu">
+                <div ng-if="skDetails.branding.length">
+                  <ul class="brandingMenuBar">
+                    <li ng-repeat="brand in skDetails.branding" ng-class="brand.toggleClass ? 'show':''">
+                      <h3 ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClass(brand, 0, 'branding')">{{brand.title}}</h3>
+                    </li>
+                  </ul>
+                  <div ng-class="toggleBrandDropdownClass ? 'dropdown brandingMenuBarMobile open':'dropdown brandingMenuBarMobile'">
+                    <button class="btn btn-primary dropdown-toggle" ng-click="toggleDropdownClass(toggleBrandDropdownClass)" type="button">{{selectedBrandBreadCrumb[0]}}<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li ng-repeat="brand in skDetails.branding"><a ng-click="toggleBrandNavClass(brand, 0, 'branding')">{{brand.title}}</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-8 brandingSection borderCCC" ng-if="selectedBrandBreadCrumb.length">
+                <ol class="breadcrumb">
+                  <li ng-repeat="breadcrumb in selectedBrandBreadCrumb" ng-class="$index === (selectedBrandBreadCrumb.length - 1) ? 'active' : ''"><a>{{breadcrumb}}</a></li>
+                  <span class="breadCrumbNotice" ng-if="selectedBrand.packing">* Packing: {{selectedBrand.packing}}</span>
+                </ol>
+                <div class="row" ng-if="selectedBrand.subItem.length">
+                  <ul ng-if="selectedBrand.subItem.length" class="brandDetailsObject">
+                    <li ng-repeat="brand in selectedBrand.subItem" ng-class="selectedBrand.subItem.length && selectedBrand.subItem[0].subItem.length ? 'col-sm-12 marginBottom20' : 'col-sm-4'">
+                      <h3 ng-if="selectedBrand.subItem.length && selectedBrand.subItem[0].subItem.length" style="margin-bottom: 10px; display: block;">{{brand.title}}</h3>
+                      <span ng-if="!(selectedBrand.subItem.length && selectedBrand.subItem[0].subItem.length)" style="margin-bottom: 10px; display: block;">{{brand.title}}</span>
+                      <ul ng-if="brand.subItem.length" class="row">
+                        <li ng-repeat="item in brand.subItem" ng-class="brand.subItem.length && brand.subItem[0].subItem.length ? 'col-sm-12' : 'col-sm-4'">
+                          <h4 ng-if="brand.subItem.length && brand.subItem[0].subItem.length" style="margin-bottom: 10px; display: block;">{{item.title}}</h4>
+                          <span ng-if="!(brand.subItem.length && brand.subItem[0].subItem.length)" style="margin-bottom: 10px; display: block;">{{item.title}}</span>
+                          <ul ng-if="item.subItem.length && !item.noSubCategory" class="row">
+                            <li ng-repeat="item1 in item.subItem" ng-class="item.subItem.length || item.subItem[0].subItem.length ? 'col-sm-12' : 'col-sm-4'">
+                              <h5 style="margin-bottom: 10px; display: block;">{{item1.title}}</h5>
+                              <!--span ng-if="!(item1.subItem.length || item1.subItem[0].subItem.length)" style="margin-bottom: 10px; display: block;">{{item1.title}}</span-->
+                              <ul ng-if="item1.subItem.length" class="row">
+                                <li ng-repeat="item2 in item1.subItem" ng-class="item1.subItem.length && item1.subItem[0].subItem.length ? 'col-sm-12' : 'col-sm-4'">
+                                  {{item2.title}}
+                                </li>
+                              </ul>
+                              <div class="brandNote" ng-if="item1.note">{{item1.note}}</div>
+                            </li>
+                          </ul>
+                          <ul ng-if="item.subItem.length && item.noSubCategory" class="row">
+                            <li ng-repeat="item1 in item.subItem" class="col-sm-4">
+                              <span style="margin-bottom: 10px; display: block;">{{item1.title}}</span>
+                              <div class="brandNote" ng-if="item1.note">{{item1.note}}</div>
+                            </li>
+                          </ul>
+                          <div class="brandNote" ng-if="item.note">{{item.note}}</div>
+                        </li>
+                      </ul>
+                      <div class="brandNote" ng-if="brand.note">{{brand.note}}</div>
+                    </li>
+                  </ul>
+                  <div class="col-sm-12 brandNote" ng-if="selectedBrand.note">{{selectedBrand.note}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container reStructure displayNone">
+            <div class="row">
+              <div class="brandingSideMenu">
+                <blockquote ng-if="skDetails.branding[toggleSelectedBrandIndex[0]].note">
+                  {{skDetails.branding[toggleSelectedBrandIndex[0]].note}}
+                </blockquote>
+                <blockquote ng-if="skDetails.branding[toggleSelectedBrandIndex[0]].packing">
+                  Packing : {{skDetails.branding[toggleSelectedBrandIndex[0]].packing}}
+                </blockquote>
+                <div ng-if="skDetails.branding.length" class="brandSubCategory">
+                  <ul class="brandingMenuBar width20">
+                    <li ng-repeat="brand in skDetails.branding" ng-class="{'show': brand.toggleClass}">
+                      <!-- First Level Category -->
+                      <h3 ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClassRenewed(brand, $index, 'branding', 0)">{{brand.title}}</h3>
+                      <div ng-if="brand.subItem.length" class="onlyForMobile brandSubCategory" ng-class="brand.haveSubSubCategory ? 'haveSubCategory' : 'noSubCategory'">
+                        <ul>
+                          <li ng-repeat="brandSubItem in brand.subItem" ng-class="{'show': brandSubItem.toggleClass}">
+                            <div ng-if="brandSubItem.subItem && brandSubItem.subItem.length">
+                              <!-- Second Level Category -->
+                              <h3 ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClassRenewed(brandSubItem, $index, 'branding', 1)">{{brandSubItem.title}}</h3>
+                              <div ng-if="brandSubItem.subItem.length" class="brandSubCategory1" ng-class="brandSubItem.haveSubSubCategory ? 'haveSubSubCategory' : 'noSubCategory'">
+                                <ul>
+                                  <li ng-repeat="brandSubItem1 in brandSubItem.subItem" ng-class="{'show': brandSubItem1.toggleClass}">
+                                    <div ng-if="brandSubItem1.subItem && brandSubItem1.subItem.length">
+                                      <!-- Third Level Category -->
+                                      <h3 ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClassRenewed(brandSubItem1, $index, 'branding', 2)">{{brandSubItem1.title}}</h3>
+                                      <div ng-if="brandSubItem1.subItem.length" class="brandSubCategory2" ng-class="brandSubItem1.haveSubSubCategory ? 'haveSubSubCategory' : 'noSubCategory'">
+                                        <ul>
+                                          <li ng-repeat="brandSubItem2 in brandSubItem1.subItem" ng-class="{'show': brandSubItem2.toggleClass}">
+                                            <div ng-if="brandSubItem2.subItem && brandSubItem2.subItem.length">
+                                              <!-- Third Level Category -->
+                                              <h3 ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClassRenewed(brandSubItem2, $index, 'branding', 3)">{{brandSubItem2.title}}</h3>
+                                              <div ng-if="brandSubItem2.subItem.length" class="brandSubCategory3" ng-class="brandSubItem2.haveSubSubCategory ? 'haveSubSubCategory' : 'noSubCategory'">
+                                                <ul>
+                                                  <li ng-repeat="brandSubItem3 in brandSubItem2.subItem" ng-class="{'show': brandSubItem3.toggleClass}">
+                                                    <div ng-if="!brandSubItem3.subItem" class="singleElement">
+                                                      <h3 ng-class="$index === 0 ? 'marginTop0':''">{{brandSubItem3.title}}</h3>
+                                                    </div>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                            <div ng-if="!brandSubItem2.subItem" class="singleElement">
+                                              <h3 ng-class="$index === 0 ? 'marginTop0':''">{{brandSubItem2.title}}</h3>
+                                            </div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div ng-if="!brandSubItem1.subItem" class="singleElement">
+                                      <h3 ng-class="$index === 0 ? 'marginTop0':''">{{brandSubItem1.title}}</h3>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div ng-if="!brandSubItem.subItem" class="singleElement">
+                              <h3 ng-class="$index === 0 ? 'marginTop0':''">{{brandSubItem.title}}</h3>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div ng-if="brand.subItem.length === 0" class="brandSubCategory">
+                        <h3>No Data Present</h3>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- First Level Category -->
+                  <div ng-if="toggleSelectedBrandIndex[0] >= 0" class="brandSubCategoryDesktop" ng-class="skDetails.branding[toggleSelectedBrandIndex[0]].haveSubSubCategory ? 'width20' : ''">
+                    <ul>
+                      <li ng-repeat="brandSubItem in skDetails.branding[toggleSelectedBrandIndex[0]].subItem" ng-class="{'show': brandSubItem.toggleClass, 'col-sm-4': skDetails.branding[toggleSelectedBrandIndex[0]].subItem.length > 9 && !skDetails.branding[toggleSelectedBrandIndex[0]].haveSubSubCategory, 'noSubCategoryTitle': !(brandSubItem.subItem && brandSubItem.subItem.length)}">
+                        <div ng-if="brandSubItem.subItem && brandSubItem.subItem.length">
+                          <!-- Second Level Category -->
+                          <strong ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClassRenewed(brandSubItem, $index, 'branding', 1)">{{brandSubItem.title}}</strong>
+                        </div>
+                        <div ng-if="!brandSubItem.subItem">
+                          <strong ng-class="$index === 0 ? 'marginTop0':''">{{brandSubItem.title}}</strong>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Second Level Category -->
+                  <div ng-if="skDetails.branding[toggleSelectedBrandIndex[0]].haveSubSubCategory" class="brandSubCategoryDesktop1" ng-class="skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].haveSubSubCategory ? 'width20' : ''">
+                    <ul>
+                      <li ng-repeat="brandSubItem in skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].subItem" ng-class="{'show': brandSubItem.toggleClass, 'col-sm-4': skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].subItem.length > 9 && !skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].haveSubSubCategory, 'noSubCategoryTitle': !(brandSubItem.subItem && brandSubItem.subItem.length)}">
+                        <div ng-if="brandSubItem.subItem && brandSubItem.subItem.length">
+                          <!-- Second Level Category -->
+                          <strong ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClassRenewed(brandSubItem, $index, 'branding', 2)">{{brandSubItem.title}}</strong>
+                        </div>
+                        <div ng-if="!brandSubItem.subItem">
+                          <strong ng-class="$index === 0 ? 'marginTop0':''">{{brandSubItem.title}}</strong>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Third Level Category -->
+                  <div ng-if="skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].haveSubSubCategory" class="brandSubCategoryDesktop2" ng-class="skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].subItem[toggleSelectedBrandIndex[2]].haveSubSubCategory ? 'width20' : ''">
+                    <ul>
+                      <li ng-repeat="brandSubItem in skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].subItem[toggleSelectedBrandIndex[2]].subItem" ng-class="{'show': brandSubItem.toggleClass, 'col-sm-6': skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].subItem[toggleSelectedBrandIndex[2]].subItem.length > 9 && !skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].subItem[toggleSelectedBrandIndex[2]].haveSubSubCategory, 'noSubCategoryTitle': !(brandSubItem.subItem && brandSubItem.subItem.length)}">
+                        <div ng-if="brandSubItem.subItem && brandSubItem.subItem.length">
+                          <!-- Second Level Category -->
+                          <strong ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClassRenewed(brandSubItem, $index, 'branding', 3)">{{brandSubItem.title}}</strong>
+                        </div>
+                        <div ng-if="!brandSubItem.subItem">
+                          <strong ng-class="$index === 0 ? 'marginTop0':''">{{brandSubItem.title}}</strong>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Forth Level Category -->
+                  <div ng-if="skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].subItem[toggleSelectedBrandIndex[2]].haveSubSubCategory" class="brandSubCategoryDesktop3">
+                    <ul>
+                      <li ng-repeat="brandSubItem in skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].subItem[toggleSelectedBrandIndex[2]].subItem[toggleSelectedBrandIndex[3]].subItem" ng-class="{'show': brandSubItem.toggleClass, 'col-sm-12': true, 'noSubCategoryTitle': !(brandSubItem.subItem && brandSubItem.subItem.length)}">
+                        <div ng-if="brandSubItem.subItem && brandSubItem.subItem.length">
+                          <strong ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClassRenewed(brandSubItem, $index, 'branding', 4)">{{brandSubItem.title}}</strong>
+                        </div>
+                        <div ng-if="!brandSubItem.subItem">
+                          <strong ng-class="$index === 0 ? 'marginTop0':''">{{brandSubItem.title}}</strong>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div ng-if="skDetails.branding.length === 0">
+                  <h3>No Brand details present</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container reStructure revamp">
+            <div class="row">
+              <div class="brandingSideMenu">
+                <!--blockquote ng-if="skDetails.branding[toggleSelectedBrandIndex[0]].note">
+                  {{skDetails.branding[toggleSelectedBrandIndex[0]].note}}
+                </blockquote>
+                <blockquote ng-if="skDetails.branding[toggleSelectedBrandIndex[0]].packing">
+                  Packing : {{skDetails.branding[toggleSelectedBrandIndex[0]].packing}}
+                </blockquote-->
+                <div ng-if="skDetails.branding.length" class="brandSubCategory">
+                  <ul class="brandingMenuBar flexUnwrap">
+                    <li ng-repeat="brand in skDetails.branding" ng-class="{'show': brand.toggleClass}" class="col-sm-2">
+                      <!-- First Level Category -->
+                      <h3 ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClassRenewed(brand, $index, 'branding', 0)">{{brand.title}}</h3>
+                      <div ng-if="brand.subItem.length" class="onlyForMobile brandSubCategory" ng-class="brand.haveSubSubCategory ? 'haveSubCategory' : 'noSubCategory'">
+                        <ul>
+                          <li ng-repeat="brandSubItem in brand.subItem" ng-class="{'show': brandSubItem.toggleClass}">
+                            <div ng-if="brandSubItem.subItem && brandSubItem.subItem.length">
+                              <!-- Second Level Category -->
+                              <h3 ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClassRenewed(brandSubItem, $index, 'branding', 1)">{{brandSubItem.title}}</h3>
+                              <div ng-if="brandSubItem.subItem.length" class="brandSubCategory1" ng-class="brandSubItem.haveSubSubCategory ? 'haveSubSubCategory' : 'noSubCategory'">
+                                <ul>
+                                  <li ng-repeat="brandSubItem1 in brandSubItem.subItem" ng-class="{'show': brandSubItem1.toggleClass}">
+                                    <div ng-if="brandSubItem1.subItem && brandSubItem1.subItem.length">
+                                      <!-- Third Level Category -->
+                                      <h3 ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClassRenewed(brandSubItem1, $index, 'branding', 2)">{{brandSubItem1.title}}</h3>
+                                      <div ng-if="brandSubItem1.subItem.length" class="brandSubCategory2" ng-class="brandSubItem1.haveSubSubCategory ? 'haveSubSubCategory' : 'noSubCategory'">
+                                        <ul>
+                                          <li ng-repeat="brandSubItem2 in brandSubItem1.subItem" ng-class="{'show': brandSubItem2.toggleClass}">
+                                            <div ng-if="brandSubItem2.subItem && brandSubItem2.subItem.length">
+                                              <!-- Third Level Category -->
+                                              <h3 ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClassRenewed(brandSubItem2, $index, 'branding', 3)">{{brandSubItem2.title}}</h3>
+                                              <div ng-if="brandSubItem2.subItem.length" class="brandSubCategory3" ng-class="brandSubItem2.haveSubSubCategory ? 'haveSubSubCategory' : 'noSubCategory'">
+                                                <ul>
+                                                  <li ng-repeat="brandSubItem3 in brandSubItem2.subItem" ng-class="{'show': brandSubItem3.toggleClass}">
+                                                    <div ng-if="!brandSubItem3.subItem" class="singleElement">
+                                                      <h3 ng-class="$index === 0 ? 'marginTop0':''">{{brandSubItem3.title}}</h3>
+                                                    </div>
+                                                  </li>
+                                                </ul>
+                                              </div>
+                                            </div>
+                                            <div ng-if="!brandSubItem2.subItem" class="singleElement">
+                                              <h3 ng-class="$index === 0 ? 'marginTop0':''">{{brandSubItem2.title}}</h3>
+                                            </div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div ng-if="!brandSubItem1.subItem" class="singleElement">
+                                      <h3 ng-class="$index === 0 ? 'marginTop0':''">{{brandSubItem1.title}}</h3>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div ng-if="!brandSubItem.subItem" class="singleElement">
+                              <h3 ng-class="$index === 0 ? 'marginTop0':''">{{brandSubItem.title}}</h3>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div ng-if="brand.subItem.length === 0" class="brandSubCategory">
+                        <h3>No Data Present</h3>
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- First Level Category -->
+                  <div ng-if="toggleSelectedBrandIndex[0] >= 0" class="brandSubCategoryDesktop">
+                    <ul ng-class="skDetails.branding[toggleSelectedBrandIndex[0]].haveSubSubCategory ? 'haveSubCategory' : ''">
+                      <li ng-repeat="brandSubItem in skDetails.branding[toggleSelectedBrandIndex[0]].subItem" ng-class="{'show': brandSubItem.toggleClass, 'haveSubCategory': skDetails.branding[toggleSelectedBrandIndex[0]].haveSubSubCategory, 'noSubCategoryTitle': !(brandSubItem.subItem && brandSubItem.subItem.length)}" class="col-sm-4">
+                        <div ng-if="brandSubItem.subItem && brandSubItem.subItem.length">
+                          <!-- Second Level Category -->
+                          <strong ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClassRenewed(brandSubItem, $index, 'branding', 1)">{{brandSubItem.title}}</strong>
+                        </div>
+                        <div ng-if="!brandSubItem.subItem">
+                          <strong ng-class="$index === 0 ? 'marginTop0':''">{{brandSubItem.title}}</strong>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Second Level Category -->
+                  <div ng-if="skDetails.branding[toggleSelectedBrandIndex[0]].haveSubSubCategory" class="brandSubCategoryDesktop1">
+                    <ul ng-class="skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].haveSubSubCategory ? 'haveSubCategory' : ''">
+                      <li ng-repeat="brandSubItem in skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].subItem" ng-class="{'show': brandSubItem.toggleClass, 'noSubCategoryTitle': !(brandSubItem.subItem && brandSubItem.subItem.length)}" class="col-sm-4">
+                        <div ng-if="brandSubItem.subItem && brandSubItem.subItem.length">
+                          <!-- Second Level Category -->
+                          <strong ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClassRenewed(brandSubItem, $index, 'branding', 2)">{{brandSubItem.title}}</strong>
+                        </div>
+                        <div ng-if="!brandSubItem.subItem">
+                          <strong ng-class="$index === 0 ? 'marginTop0':''">{{brandSubItem.title}}</strong>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Third Level Category -->
+                  <div ng-if="skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].haveSubSubCategory" class="brandSubCategoryDesktop2">
+                    <ul ng-class="skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].subItem[toggleSelectedBrandIndex[2]].haveSubSubCategory ? 'haveSubCategory' : ''">
+                      <li ng-repeat="brandSubItem in skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].subItem[toggleSelectedBrandIndex[2]].subItem" ng-class="{'show': brandSubItem.toggleClass, 'noSubCategoryTitle': !(brandSubItem.subItem && brandSubItem.subItem.length)}" class="col-sm-4">
+                        <div ng-if="brandSubItem.subItem && brandSubItem.subItem.length">
+                          <!-- Second Level Category -->
+                          <strong ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClassRenewed(brandSubItem, $index, 'branding', 3)">{{brandSubItem.title}}</strong>
+                        </div>
+                        <div ng-if="!brandSubItem.subItem">
+                          <strong ng-class="$index === 0 ? 'marginTop0':''">{{brandSubItem.title}}</strong>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- Forth Level Category -->
+                  <div ng-if="skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].subItem[toggleSelectedBrandIndex[2]].haveSubSubCategory" class="brandSubCategoryDesktop3">
+                    <ul>
+                      <li ng-repeat="brandSubItem in skDetails.branding[toggleSelectedBrandIndex[0]].subItem[toggleSelectedBrandIndex[1]].subItem[toggleSelectedBrandIndex[2]].subItem[toggleSelectedBrandIndex[3]].subItem" ng-class="{'show': brandSubItem.toggleClass, 'col-sm-4': true, 'noSubCategoryTitle': !(brandSubItem.subItem && brandSubItem.subItem.length)}" class="noSubCategoryTitle">
+                        <div ng-if="brandSubItem.subItem && brandSubItem.subItem.length">
+                          <strong ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClassRenewed(brandSubItem, $index, 'branding', 4)">{{brandSubItem.title}}</strong>
+                        </div>
+                        <div ng-if="!brandSubItem.subItem">
+                          <strong ng-class="$index === 0 ? 'marginTop0':''">{{brandSubItem.title}}</strong>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div ng-if="skDetails.branding.length === 0">
+                  <h3>No Brand details present</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div ng-if="activePage === 6">
+        <section class="products classification">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4 brandingSideMenu">
+                <div ng-if="skDetails.itemClassification.length">
+                  <ul class="brandingMenuBar">
+                    <li ng-repeat="brand in skDetails.itemClassification" ng-class="brand.toggleClass ? 'show':''">
+                      <h3 ng-class="$index === 0 ? 'marginTop0':''" ng-click="toggleBrandNavClass(brand, 0, 'itemClassification')">{{brand.title}}</h3>
+                    </li>
+                  </ul>
+                  <div ng-class="toggleBrandDropdownClass ? 'dropdown brandingMenuBarMobile open':'dropdown brandingMenuBarMobile'">
+                    <button class="btn btn-primary dropdown-toggle" ng-click="toggleDropdownClass(toggleBrandDropdownClass)" type="button">{{selectedBrandBreadCrumb[0]}}<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li ng-repeat="brand in skDetails.itemClassification"><a ng-click="toggleBrandNavClass(brand, 0, 'itemClassification')">{{brand.title}}</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-8 brandingSection borderCCC" ng-if="selectedBrandBreadCrumb.length">
+                <ol class="breadcrumb">
+                  <li ng-repeat="breadcrumb in selectedBrandBreadCrumb" ng-class="$index === (selectedBrandBreadCrumb.length - 1) ? 'active' : ''"><a>{{breadcrumb}}</a></li>
+                </ol>
+                <div class="row" ng-if="selectedBrand.subItem.length">
+                  <ul ng-if="selectedBrand.subItem.length" class="brandDetailsObject">
+                    <li ng-repeat="brand in selectedBrand.subItem" ng-class="selectedBrand.subItem.length && selectedBrand.subItem[0].subItem.length ? 'col-sm-12 marginBottom20' : 'col-sm-4'">
+                      <h3 ng-if="selectedBrand.subItem.length && selectedBrand.subItem[0].title" style="margin-bottom: 10px; display: block;">{{brand.title}}</h3>
+                      <strong ng-if="!(selectedBrand.subItem.length && selectedBrand.subItem[0].title)" style="margin-bottom: 10px; display: block;">{{brand.title}}</strong>
+                      <ul ng-if="brand.subItem.length" class="row">
+                        <li ng-repeat="item in brand.subItem" ng-class="brand.subItem.length && (brand.subItem[0].subItem.length || brand.subItem[1].subItem.length) ? 'col-sm-12' : 'col-sm-4'">
+                          <h4 ng-if="brand.subItem.length && brand.subItem[0].title" style="margin-bottom: 10px; display: block;">{{item.title}}</h4>
+                          <span ng-if="!(brand.subItem.length && brand.subItem[0].title)" style="margin-bottom: 10px; display: block;">{{item.title}}</span>
+                          <ul ng-if="item.subItem.length" class="row">
+                            <li ng-repeat="item1 in item.subItem" ng-class="item.subItem.length && item.subItem[0].subItem.length ? 'col-sm-12' : 'col-sm-4'">
+                              <h5 ng-if="item.subItem.length && item.subItem[0].title" style="margin-bottom: 10px; display: block;">{{item1.title}}</h5>
+                              <span ng-if="!(item.subItem.length && item.subItem[0].title)" style="margin-bottom: 10px; display: block;">{{item1.title}}</span>
+                              <ul ng-if="item1.subItem.length" class="row">
+                                <li ng-repeat="item2 in item1.subItem" ng-class="item1.subItem.length && item1.subItem[0].subItem.length ? 'col-sm-12' : 'col-sm-4'">
+                                  {{item2.title}}
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div ng-if="activePage === 5">
+        <section class="products classification">
+          <div class="container">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+              <div class="panel panel-default" ng-repeat="brand in skDetails.branding">
+                <!-- Accordion Phase 1 -->
+                <div class="panel-heading" role="tab" id="heading{{$index}}">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$index}}" aria-expanded="true" aria-controls="collapse{{$index}}">{{brand.title}}</a>
+                  </h4>
+                </div>
+                <div id="collapse{{$index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{$index}}">
+                  <div class="panel-body">
+
+                    <!-- Accordion Phase 2 : If no sub category then no accordion -->
+                    <div ng-if="!brand.haveSubSubCategory" class="row">
+                      <div ng-repeat="brandItem in brand.subItem" class="col-sm-4">
+                        {{brandItem.title}}
+                      </div>
+                    </div>
+                    <!-- Accordion Phase 2 : If sub category then accordion -->
+                    <div ng-if="brand.haveSubSubCategory">
+                      <div class="panel-group mb0" id="accordionSubItem{{brandItem.id}}" role="tablist" aria-multiselectable="false">
+                        <div class="panel panel-default" ng-repeat="brandItem in brand.subItem">
+                          <!-- No Sub Sub Category -->
+                          <div class="panel-heading" role="tab" id="headingSubItem{{brandItem.id}}" ng-if="!brandItem.subItem">
+                            <h4 class="panel-title">{{brandItem.title}}</h4>
+                          </div>
+                          <!-- Sub Sub Category -->
+                          <div class="panel-heading" role="tab" id="headingSubItem{{brandItem.id}}" ng-if="brandItem.subItem">
+                            <h4 class="panel-title">
+                              <a role="button" data-toggle="collapse" data-parent="#accordionSubItem{{brandItem.id}}" href="#collapseSubItem{{brandItem.id}}" aria-expanded="true" aria-controls="collapseSubItem{{brandItem.id}}">{{brandItem.title}}</a>
+                            </h4>
+                          </div>
+                          <div id="collapseSubItem{{brandItem.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSubItem{{brandItem.id}}" ng-if="brandItem.subItem">
+                            <div class="panel-body">
+
+                              <!-- Accordion Phase 3 : If no sub category then no accordion -->
+                              <div ng-if="!brandItem.haveSubSubCategory" class="row">
+                                <div  ng-repeat="brandSubItem in brandItem.subItem" class="col-sm-4">
+                                  {{brandSubItem.title}}
+                                </div>
+                              </div>
+                              <!-- Accordion Phase 3 : If sub category then accordion -->
+                              <div ng-if="brandItem.haveSubSubCategory">
+                                <div class="panel-group mb0" id="accordionSubItem{{brandSubItem.id}}" role="tablist" aria-multiselectable="false">
+                                  <div class="panel panel-default" ng-repeat="brandSubItem in brandItem.subItem">
+                                    <!-- No Sub Sub Category -->
+                                    <div class="panel-heading" role="tab" id="headingSubItem{{brandSubItem.id}}" ng-if="!brandSubItem.subItem">
+                                      <h4 class="panel-title">{{brandSubItem.title}}</h4>
+                                    </div>
+                                    <!-- Sub Sub Category -->
+                                    <div class="panel-heading" role="tab" id="headingSubItem{{brandSubItem.id}}" ng-if="brandSubItem.subItem">
+                                      <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordionSubItem{{brandSubItem.id}}" href="#collapseSubItem{{brandSubItem.id}}" aria-expanded="true" aria-controls="collapseSubItem{{brandSubItem.id}}">{{brandSubItem.title}}</a>
+                                      </h4>
+                                    </div>
+                                    <div id="collapseSubItem{{brandSubItem.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSubItem{{brandSubItem.id}}" ng-if="brandSubItem.subItem">
+                                      <div class="panel-body">
+
+                                        <!-- Accordion Phase 4 : If no sub category then no accordion -->
+                                        <div ng-if="!brandSubItem.haveSubSubCategory" class="row">
+                                          <div ng-repeat="brandSubSubItem in brandSubItem.subItem" class="col-sm-4">
+                                            {{brandSubSubItem.title}}
+                                          </div>
+                                        </div>
+                                        <!-- Accordion Phase 4 : If sub category then accordion -->
+                                        <div ng-if="brandSubItem.haveSubSubCategory">
+                                          <div class="panel-group mb0" id="accordionSubItem{{brandSubSubItem.id}}" role="tablist" aria-multiselectable="false">
+                                            <div class="panel panel-default" ng-repeat="brandSubSubItem in brandSubItem.subItem">
+                                              <!-- No Sub Sub Category -->
+                                              <div class="panel-heading" role="tab" id="headingSubItem{{brandSubSubItem.id}}" ng-if="!brandSubSubItem.subItem">
+                                                <h4 class="panel-title">{{brandSubSubItem.title}}</h4>
+                                              </div>
+                                              <!-- Sub Sub Category -->
+                                              <div class="panel-heading" role="tab" id="headingSubItem{{brandSubSubItem.id}}" ng-if="brandSubSubItem.subItem">
+                                                <h4 class="panel-title">
+                                                  <a role="button" data-toggle="collapse" data-parent="#accordionSubItem{{brandSubSubItem.id}}" href="#collapseSubItem{{brandSubSubItem.id}}" aria-expanded="true" aria-controls="collapseSubItem{{brandSubSubItem.id}}">{{brandSubSubItem.title}}</a>
+                                                </h4>
+                                              </div>
+                                              <div id="collapseSubItem{{brandSubSubItem.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSubItem{{brandSubSubItem.id}}" ng-if="brandSubSubItem.subItem">
+                                                <div class="panel-body">
+
+                                                  <!-- Accordion Phase 5 : If no sub category then no accordion -->
+                                                  <div ng-if="!brandSubSubItem.haveSubSubCategory" class="row">
+                                                    <div ng-repeat="brandSubSubSubItem in brandSubSubItem.subItem" class="col-sm-4">
+                                                      {{brandSubSubSubItem.title}}
+                                                    </div>
+                                                  </div>
+                                                  <!-- Accordion Phase 5 : If sub category then accordion -->
+                                                  <div ng-if="brandSubSubItem.haveSubSubCategory">
+                                                    <div class="panel-group mb0" id="accordionSubItem{{brandSubSubSubItem.id}}" role="tablist" aria-multiselectable="false">
+                                                      <div class="panel panel-default" ng-repeat="brandSubSubSubItem in brandSubSubItem.subItem">
+                                                        <!-- No Sub Sub Category -->
+                                                        <div class="panel-heading" role="tab" id="headingSubItem{{brandSubSubSubItem.id}}" ng-if="!brandSubSubSubItem.subItem">
+                                                          <h4 class="panel-title">{{brandSubSubSubItem.title}}</h4>
+                                                        </div>
+                                                        <!-- Sub Sub Category -->
+                                                        <div class="panel-heading" role="tab" id="headingSubItem{{brandSubSubSubItem.id}}" ng-if="brandSubSubSubItem.subItem">
+                                                          <h4 class="panel-title">
+                                                            <a role="button" data-toggle="collapse" data-parent="#accordionSubItem{{brandSubSubSubItem.id}}" href="#collapseSubItem{{brandSubSubSubItem.id}}" aria-expanded="true" aria-controls="collapseSubItem{{brandSubSubSubItem.id}}">{{brandSubSubSubItem.title}}</a>
+                                                          </h4>
+                                                        </div>
+                                                        <div id="collapseSubItem{{brandSubSubSubItem.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSubItem{{brandSubSubSubItem.id}}" ng-if="brandSubSubSubItem.subItem">
+                                                          <div class="panel-body">
+                                                            Having Data
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="map clearfix">
+        <!--iframe src="{{contact.mapPath}}"></iframe-->
+        <div class="mapContainer">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.8701552570574!2d74.46418651486665!3d16.68337978850412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd451ff7da1aa0dd8!2sSUNILKUMAR%20KANTILAL%20(%20SK&#39;s%20WHOLESALE%20)!5e0!3m2!1sen!2sin!4v1579942397501!5m2!1sen!2sin" frameborder="0" style="position: absolute;width: 100%;top: 0;left: 0;height: 420px;" allowfullscreen=""></iframe>
+        </div>
+        <div class="mapAddress">
+          <div class="address">
+            <h2 class="marginTop0">Contact Us</h2>
+            <h4>Address</h4>
+            <p class="marginBottom20">{{skDetails.contactUs.officeAddres}}</p>
+            <h4>Telephone Number</h4>
+            <p class="marginBottom20">{{skDetails.contactUs.telephoneNumber}}</p>
+            <h4>Mobile Number</h4>
+            <p class="marginBottom20">{{skDetails.contactUs.phoneNumber}}</p>
+            <h4>Email Address</h4>
+            <p>{{skDetails.contactUs.emailAddress}}</p>
+          </div>
+        </div>
+      </section>
+      <footer class="text-center">&copy; {{copyright | date:'yyyy'}} SK's Wholesale All rights reserved</footer>
+    </div>
+    <script src="js/angular.min.js" data-semver="1.5.10"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      window.onscroll = function() {
+        if (window.pageYOffset > 500) {
+          document.getElementById('id-navigation').classList.add('flatNav');
+        } else {
+          document.getElementById('id-navigation').classList.remove('flatNav');
+        }
+      }
+    </script>
+  </body>
 </html>
