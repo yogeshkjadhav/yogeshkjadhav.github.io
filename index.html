@@ -542,19 +542,18 @@
         </section>
       </div>
       <div ng-if="activePage === 5">
-        <section class="products classification">
+        <section class="products classification bgGray">
           <div class="container">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
               <div class="panel panel-default" ng-repeat="brand in skDetails.branding">
                 <!-- Accordion Phase 1 -->
-                <div class="panel-heading" role="tab" id="heading{{$index}}">
+                <div class="panel-heading productTitle1" role="tab" id="heading{{$index}}">
                   <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$index}}" aria-expanded="true" aria-controls="collapse{{$index}}">{{brand.title}}</a>
                   </h4>
                 </div>
                 <div id="collapse{{$index}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{$index}}">
-                  <div class="panel-body">
-
+                  <div class="panel-body borderTop0 paddingTop0">
                     <!-- Accordion Phase 2 : If no sub category then no accordion -->
                     <div ng-if="!brand.haveSubSubCategory" class="row">
                       <div ng-repeat="brandItem in brand.subItem" class="col-sm-4">
@@ -564,65 +563,65 @@
                     <!-- Accordion Phase 2 : If sub category then accordion -->
                     <div ng-if="brand.haveSubSubCategory">
                       <div class="panel-group mb0" id="accordionSubItem{{brandItem.id}}" role="tablist" aria-multiselectable="false">
-                        <div class="panel panel-default" ng-repeat="brandItem in brand.subItem">
+                        <div class="panel panel-default border0" ng-repeat="brandItem in brand.subItem">
                           <!-- No Sub Sub Category -->
-                          <div class="panel-heading" role="tab" id="headingSubItem{{brandItem.id}}" ng-if="!brandItem.subItem">
-                            <h4 class="panel-title">{{brandItem.title}}</h4>
+                          <div class="panel-heading productTitle2" role="tab" id="headingSubItem{{brandItem.id}}" ng-if="!brandItem.subItem">
+                            <h4 class="panel-title noSubProduct">{{brandItem.title}}</h4>
                           </div>
                           <!-- Sub Sub Category -->
-                          <div class="panel-heading" role="tab" id="headingSubItem{{brandItem.id}}" ng-if="brandItem.subItem">
+                          <div class="panel-heading productTitle2" role="tab" id="headingSubItem{{brandItem.id}}" ng-if="brandItem.subItem">
                             <h4 class="panel-title">
                               <a role="button" data-toggle="collapse" data-parent="#accordionSubItem{{brandItem.id}}" href="#collapseSubItem{{brandItem.id}}" aria-expanded="true" aria-controls="collapseSubItem{{brandItem.id}}">{{brandItem.title}}</a>
                             </h4>
                           </div>
                           <div id="collapseSubItem{{brandItem.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSubItem{{brandItem.id}}" ng-if="brandItem.subItem">
-                            <div class="panel-body">
+                            <div class="panel-body borderTop0 paddingTop0">
 
                               <!-- Accordion Phase 3 : If no sub category then no accordion -->
                               <div ng-if="!brandItem.haveSubSubCategory" class="row">
-                                <div  ng-repeat="brandSubItem in brandItem.subItem" class="col-sm-4">
+                                <div ng-repeat="brandSubItem in brandItem.subItem" class="col-sm-4">
                                   {{brandSubItem.title}}
                                 </div>
                               </div>
                               <!-- Accordion Phase 3 : If sub category then accordion -->
                               <div ng-if="brandItem.haveSubSubCategory">
                                 <div class="panel-group mb0" id="accordionSubItem{{brandSubItem.id}}" role="tablist" aria-multiselectable="false">
-                                  <div class="panel panel-default" ng-repeat="brandSubItem in brandItem.subItem">
+                                  <div class="panel panel-default border0 paddingTop0" ng-repeat="brandSubItem in brandItem.subItem">
                                     <!-- No Sub Sub Category -->
-                                    <div class="panel-heading" role="tab" id="headingSubItem{{brandSubItem.id}}" ng-if="!brandSubItem.subItem">
-                                      <h4 class="panel-title">{{brandSubItem.title}}</h4>
+                                    <div class="panel-heading productTitle3" role="tab" id="headingSubItem{{brandSubItem.id}}" ng-if="!brandSubItem.subItem">
+                                      <h4 class="panel-title noSubProduct">{{brandSubItem.title}}</h4>
                                     </div>
                                     <!-- Sub Sub Category -->
-                                    <div class="panel-heading" role="tab" id="headingSubItem{{brandSubItem.id}}" ng-if="brandSubItem.subItem">
+                                    <div class="panel-heading productTitle3" role="tab" id="headingSubItem{{brandSubItem.id}}" ng-if="brandSubItem.subItem">
                                       <h4 class="panel-title">
                                         <a role="button" data-toggle="collapse" data-parent="#accordionSubItem{{brandSubItem.id}}" href="#collapseSubItem{{brandSubItem.id}}" aria-expanded="true" aria-controls="collapseSubItem{{brandSubItem.id}}">{{brandSubItem.title}}</a>
                                       </h4>
                                     </div>
                                     <div id="collapseSubItem{{brandSubItem.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSubItem{{brandSubItem.id}}" ng-if="brandSubItem.subItem">
-                                      <div class="panel-body">
+                                      <div class="panel-body borderTop0 paddingTop0">
 
                                         <!-- Accordion Phase 4 : If no sub category then no accordion -->
                                         <div ng-if="!brandSubItem.haveSubSubCategory" class="row">
-                                          <div ng-repeat="brandSubSubItem in brandSubItem.subItem" class="col-sm-4">
+                                          <div ng-repeat="brandSubSubItem in brandSubItem.subItem" class="col-sm-4 productTitleSubItem">
                                             {{brandSubSubItem.title}}
                                           </div>
                                         </div>
                                         <!-- Accordion Phase 4 : If sub category then accordion -->
                                         <div ng-if="brandSubItem.haveSubSubCategory">
                                           <div class="panel-group mb0" id="accordionSubItem{{brandSubSubItem.id}}" role="tablist" aria-multiselectable="false">
-                                            <div class="panel panel-default" ng-repeat="brandSubSubItem in brandSubItem.subItem">
+                                            <div class="panel panel-default border0 paddingTop0" ng-repeat="brandSubSubItem in brandSubItem.subItem">
                                               <!-- No Sub Sub Category -->
-                                              <div class="panel-heading" role="tab" id="headingSubItem{{brandSubSubItem.id}}" ng-if="!brandSubSubItem.subItem">
-                                                <h4 class="panel-title">{{brandSubSubItem.title}}</h4>
+                                              <div class="panel-heading productTitle4" role="tab" id="headingSubItem{{brandSubSubItem.id}}" ng-if="!brandSubSubItem.subItem">
+                                                <h4 class="panel-title noSubProduct">{{brandSubSubItem.title}}</h4>
                                               </div>
                                               <!-- Sub Sub Category -->
-                                              <div class="panel-heading" role="tab" id="headingSubItem{{brandSubSubItem.id}}" ng-if="brandSubSubItem.subItem">
+                                              <div class="panel-heading productTitle4" role="tab" id="headingSubItem{{brandSubSubItem.id}}" ng-if="brandSubSubItem.subItem">
                                                 <h4 class="panel-title">
                                                   <a role="button" data-toggle="collapse" data-parent="#accordionSubItem{{brandSubSubItem.id}}" href="#collapseSubItem{{brandSubSubItem.id}}" aria-expanded="true" aria-controls="collapseSubItem{{brandSubSubItem.id}}">{{brandSubSubItem.title}}</a>
                                                 </h4>
                                               </div>
                                               <div id="collapseSubItem{{brandSubSubItem.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSubItem{{brandSubSubItem.id}}" ng-if="brandSubSubItem.subItem">
-                                                <div class="panel-body">
+                                                <div class="panel-body borderTop0 paddingTop0">
 
                                                   <!-- Accordion Phase 5 : If no sub category then no accordion -->
                                                   <div ng-if="!brandSubSubItem.haveSubSubCategory" class="row">
@@ -635,17 +634,17 @@
                                                     <div class="panel-group mb0" id="accordionSubItem{{brandSubSubSubItem.id}}" role="tablist" aria-multiselectable="false">
                                                       <div class="panel panel-default" ng-repeat="brandSubSubSubItem in brandSubSubItem.subItem">
                                                         <!-- No Sub Sub Category -->
-                                                        <div class="panel-heading" role="tab" id="headingSubItem{{brandSubSubSubItem.id}}" ng-if="!brandSubSubSubItem.subItem">
-                                                          <h4 class="panel-title">{{brandSubSubSubItem.title}}</h4>
+                                                        <div class="panel-heading productTitle5" role="tab" id="headingSubItem{{brandSubSubSubItem.id}}" ng-if="!brandSubSubSubItem.subItem">
+                                                          <h4 class="panel-title noSubProduct">{{brandSubSubSubItem.title}}</h4>
                                                         </div>
                                                         <!-- Sub Sub Category -->
-                                                        <div class="panel-heading" role="tab" id="headingSubItem{{brandSubSubSubItem.id}}" ng-if="brandSubSubSubItem.subItem">
+                                                        <div class="panel-heading productTitle5" role="tab" id="headingSubItem{{brandSubSubSubItem.id}}" ng-if="brandSubSubSubItem.subItem">
                                                           <h4 class="panel-title">
                                                             <a role="button" data-toggle="collapse" data-parent="#accordionSubItem{{brandSubSubSubItem.id}}" href="#collapseSubItem{{brandSubSubSubItem.id}}" aria-expanded="true" aria-controls="collapseSubItem{{brandSubSubSubItem.id}}">{{brandSubSubSubItem.title}}</a>
                                                           </h4>
                                                         </div>
                                                         <div id="collapseSubItem{{brandSubSubSubItem.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSubItem{{brandSubSubSubItem.id}}" ng-if="brandSubSubSubItem.subItem">
-                                                          <div class="panel-body">
+                                                          <div class="panel-body borderTop0 paddingTop0">
                                                             Having Data
                                                           </div>
                                                         </div>
